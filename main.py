@@ -50,5 +50,5 @@ def perform_arithmetics(data: models.InputModel):
         }
 
         return response
-
-    raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, details='Invalid operation type')
+    else:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, details='Invalid operation type')
